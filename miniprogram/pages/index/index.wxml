@@ -2,7 +2,7 @@
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
     <view class="ipaddr-wrapper">
-      <text class="ipaddr-label">输入IP:Port</text>
+      <text class="ipaddr-label">服务器地址</text>
       <input type="nickname" class="ipaddr-input" placeholder="例如,192.168.31.135:8080" bind:change="onIpInputChange" value="{{ serverIpAndPort }}" />
     </view>
     <view class="button-group-test">

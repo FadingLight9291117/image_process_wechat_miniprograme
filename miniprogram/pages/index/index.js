@@ -30,7 +30,7 @@ Page({
   onSelectImage(e) {
     console.log('onSelectImage')
     wx.chooseMedia({
-      count: 9,
+      count: 99,
       mediaType: ['image', 'video'],
       sourceType: ['album', 'camera'],
       maxDuration: 30,
@@ -52,6 +52,9 @@ Page({
 
   onTestServerAccess(e) {
     console.log('submit button click.')
+    wx.showLoading({
+      title: '连接中...',
+    })
     wx.request({
       url: `http://${this.data.serverIpAndPort}/ping`,
       header: {
@@ -61,11 +64,13 @@ Page({
         this.setData({
           isAccess: true,
         })
+        wx.hideLoading()
       },
       fail: () => {
         this.setData({
           isAccess: false,
         })
+        wx.hideLoading()
       }
     })
   },
