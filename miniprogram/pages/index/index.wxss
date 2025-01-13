@@ -1,0 +1,110 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px 0 0 0;
+}
+
+.ipaddr-wrapper {
+  background-color: cornsilk;
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.ipaddr-label {
+  width: 105px;
+}
+
+.ipaddr-input {
+  flex: 1;
+}
+
+.select-images {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button-group-test {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  margin-top: 0;
+}
+
+.test-server-access {
+  flex: 1;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #007AFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.choose-button {
+  background-color: #007AFF;
+}
+
+.submit-button {
+  background-color: #1AAD19;
+}
+
+.selected-image-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  width: 100px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.selected-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.result-text {
+  display: block;
+  margin: 5px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}

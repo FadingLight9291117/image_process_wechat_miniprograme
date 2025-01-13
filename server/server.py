@@ -26,12 +26,15 @@ def index():
     </html>
 '''
 
-@app.route('/hello')
+
+@app.route('/ping')
 def hello():
     return 'Hello, World!'
 
+
+# 上传多个文件
 @app.route('/upload', methods=['POST'])
-def upload_image():
+def upload_images():
     # 获取上传的多个文件
     files = request.files.getlist('file')
 

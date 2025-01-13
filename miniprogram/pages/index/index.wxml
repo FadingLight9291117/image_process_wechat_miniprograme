@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="ipaddr-wrapper">
+      <text class="ipaddr-label">输入IP:Port</text>
+      <input type="nickname" class="ipaddr-input" placeholder="例如,192.168.31.135:8080" bind:change="onIpInputChange" value="{{ serverIpAndPort }}" />
+    </view>
+    <view class="button-group-test">
+      <button class="button test-server-access" bind:tap="onTestServerAccess" type="{{isAccess ? 'default': 'warn'}}"> {{ isAccess ? "服务器连接成功": isAccess === '' ? "测试服务器连接" : "服务器连接失败" }}</button>
+    </view>
+    <view class="select-images">
+      <view class="button-group">
+        <button class="button choose-button" bind:tap="onSelectImage">选择图片</button>
+        <button class="button submit-button" bind:tap="onSubmitClick">提交</button>
+      </view>
+      <view class="image-container">
+        <view wx:for="{{imagePathList}}" wx:key="*this" class="selected-image-container">
+          <image src="{{item.path}}" class="selected-image" />
+          <text class="result-text">{{item.result}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
